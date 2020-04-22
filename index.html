@@ -6,19 +6,37 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
       <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+      <script>
+          window.onload = function() {
+          var h = window.innerHeight;
+          console.log(h);
+          console.log(h/4);
+          document.getElementById("mylogo").style.margin = h/6+" 0 "+h/6+" 5%";
+          document.getElementById("experience").style.height = h+"px";
+          };
+
+          function myFunction() {
+          document.querySelector('#experience').scrollIntoView({
+              behavior: 'smooth'
+          });
+          }
+      </script>
 </head>
 <body>
+            <div class="alert alert-warning alert-dismissible">
+                <center><button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Sorry!</strong> Website Under Construction.</center>
+            </div>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <a class="navbar-brand" href="#">
             <img src="https://lofrev.net/wp-content/photos/2017/05/roar_r_logo_1.png" alt="logo" style="width:50px;">
         </a>
-
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Experience</a>
+                <a class="nav-link" onclick="myFunction()">Experience</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Skills</a>
@@ -29,27 +47,30 @@
         </ul>
     </nav>
     <div class="row">
-        <div class="col" >
+        <div class="col" id="mylogo">
             <div class="card">
               <img class="card-img-top" src="https://ca.slack-edge.com/T032648LE-UUKP9GQNS-43019cb9e648-512" alt="Card image">
               <div class="card-body">
                 <h4 class="card-title">Rakesh Kumar T</h4>
                 <p class="card-text">Software Engineer at Freshworks</p>
-                  <a href="https://www.linkedin.com/in/rk2499/" class="btn btn-primary" target="_blank" style="color: black"><i class='fab fa-linkedin' style='font-size:24px'></i> LinkedIn</a>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <a href="https://github.com/rakesht2499" class="btn btn-success" target="_blank" style="color: black"><i class='fab fa-github' style='font-size:24px'></i> Github</a>
+                  <a href="https://www.linkedin.com/in/rk2499/" class="btn" target="_blank" style="color: rgba(0,0,0,0)"><i class='fab fa-linkedin' style='font-size:44px;color:#0072b1'></i></a>
+                  &nbsp;&nbsp;&nbsp;
+                  <a href="https://github.com/rakesht2499" class="btn btn-success" target="_blank" style="color: black"><i class='fab fa-github' style='font-size:24px'></i></a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="https://auth.geeksforgeeks.org/user/rakeshkumar18/profile" class="btn" target="_blank" style="background-color: white"><i class='fas fa-code' style='font-size:23px;color:green;'></i></i></a>
               </div>
             </div>
         </div>
         <div class="col">
-            <div class="alert alert-warning alert-dismissible">
-                <button type="button" class="close" data-dismiss="alert">&times;</button>
-                <strong>Sorry!</strong> Website Under Construction.
+            <div id="aboutme">
+
             </div>
+            The column goes here
       </div>
-      <div class="col">
-          Nothin here
-      </div>
+    </div>
+    <br>
+    <div class="row container" id="experience">
+        <span style="color:white">Experience goes here</span>
     </div>
 </body>
 </html>

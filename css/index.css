@@ -2,10 +2,17 @@ body {
       background-image: url("https://images.wallpaperscraft.com/image/cubes_grid_background_dark_texture_50364_1920x1180.jpg");
       background-attachment: fixed;
       background-size: cover;
+    height: 100%;
+    overflow: auto;
 }
 
 .card {
       width:400px;
       background-color:rgba(0,0,0,0.2);
       color: rgba(255,255,255,0.3);
+}
+
+html {
+    overflow: hidden;
+    height: 100%;
 }
