@@ -12,13 +12,20 @@
           console.log(h);
           console.log(h/4);
           document.getElementById("mylogo").style.margin = h/6+" 0 "+h/6+" 5%";
+          document.getElementById("aboutme").style.margin = h/6+" 0 "+h/6+" 0";
           document.getElementById("experience").style.height = h+"px";
-          };
+          }
 
-          function myFunction() {
-          document.querySelector('#experience').scrollIntoView({
-              behavior: 'smooth'
-          });
+          function gotoExperience() {
+              document.querySelector('#experience').scrollIntoView({
+                  behavior: 'smooth'
+              });
+          }
+
+          function gotoMyIntro() {
+              document.querySelector('#FirstRowAboutMe').scrollIntoView({
+                  behavior: 'smooth'
+              });
           }
       </script>
 </head>
@@ -27,16 +34,18 @@
                 <center><button type="button" class="close" data-dismiss="alert">&times;</button>
                 <strong>Sorry!</strong> Website Under Construction.</center>
             </div>
+
+<!-- Fixed Navbar -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <a class="navbar-brand" href="#">
             <img src="https://lofrev.net/wp-content/photos/2017/05/roar_r_logo_1.png" alt="logo" style="width:50px;">
         </a>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" onclick="gotoMyIntro()">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" onclick="myFunction()">Experience</a>
+                <a class="nav-link" onclick="gotoExperience()">Experience</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Skills</a>
@@ -46,7 +55,9 @@
             </li>
         </ul>
     </nav>
-    <div class="row">
+
+<!-- About Me -->
+    <div class="row" id="FirstRowAboutMe">
         <div class="col" id="mylogo">
             <div class="card">
               <img class="card-img-top" src="https://ca.slack-edge.com/T032648LE-UUKP9GQNS-43019cb9e648-512" alt="Card image">
@@ -62,10 +73,9 @@
             </div>
         </div>
         <div class="col">
-            <div id="aboutme">
-
-            </div>
+            <div id="aboutme" style="color:white">
             The column goes here
+            </div>
       </div>
     </div>
     <br>
