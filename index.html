@@ -1,107 +1,219 @@
 <html>
-  <head>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-      <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-      <script src="https://www.w3schools.com/lib/w3.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script type="text/javascript" src="js/index.js"></script>
-      <link rel="stylesheet" href="css/index.css">
-      <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="alert alert-warning alert-dismissible">
-        <center><button type="button" class="close" data-dismiss="alert">&times;</button>
-        <strong>Sorry!</strong> Website Under Construction.</center>
-    </div>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <script src="https://www.w3schools.com/lib/w3.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <link rel="stylesheet" href="css/index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="alert alert-warning alert-dismissible animated fadeInDown alertstyle">
+            <center>
+                <button type="button" class="close" onclick="$('.alert-dismissible').addClass('animated fadeOutUp')">&times;
+                </button>
+                <strong>Apologize For the Mess !!!</strong> <br>Website Under Construction<br>Crafting to make the Best one out
+                there.
+            </center>
+        </div>
 
-<!-- Fixed Navbar -->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a class="navbar-brand" href="#">
-            <img src="https://lofrev.net/wp-content/photos/2017/05/roar_r_logo_1.png" alt="logo" style="width:50px;">
-        </a>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" onclick="gotoMyIntro()">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" onclick="gotoExperience()">Experience</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Skills</a>
-            </li> 
-            <li class="nav-item">
-                <a class="nav-link" href="#">Projects</a>
-            </li>
-        </ul>
-    </nav>
+        <!-- Fixed Navbar -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand" href="#">
+                <img src="https://lofrev.net/wp-content/photos/2017/05/roar_r_logo_1.png" alt="logo" style="width:50px;">
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" onclick="gotoMyIntro()">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="gotoExperience()">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Projects</a>
+                </li>
+            </ul>
+        </nav>
 
-<!-- About Me -->
-    <div class="row fullView" id="FirstRowAboutMe">
-        <div class="col-lg-5 animated slideInLeft" id="mylogo">
-          <center>
-            <div class="card verticalCenter cardCss">
-              <img class="card-img-top" src="https://ca.slack-edge.com/T032648LE-UUKP9GQNS-43019cb9e648-512" alt="Card image">
-              <div class="card-body">
-                <h4 class="card-title">Rakesh Kumar T</h4>
-                <p class="card-text">Software Engineer at Freshworks</p>
-                  <a href="https://www.linkedin.com/in/rk2499/" class="btn" target="_blank" style="color: rgba(0,0,0,0)"><i class='fab fa-linkedin' style='font-size:44px;color:#0072b1'></i></a>
-                  &nbsp;&nbsp;&nbsp;
-                  <a href="https://github.com/rakesht2499" class="btn btn-success" target="_blank" style="color: black"><i class='fab fa-github' style='font-size:24px'></i></a>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <a href="https://auth.geeksforgeeks.org/user/rakeshkumar18/profile" class="btn" target="_blank" style="background-color: white"><i class='fas fa-code' style='font-size:23px;color:green;'></i></i></a>
-              </div>
+        <!-- About Me -->
+        <div class="row fullView" id="FirstRowAboutMe">
+            <div class="col-lg-5 animated slideInLeft" id="mylogo">
+                <center>
+                    <div class="card verticalCenter cardCss">
+                        <img class="card-img-top" src="images/profile.jpeg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Rakesh Kumar T</h4>
+                            <p class="card-text">Software Engineer at Freshworks</p>
+                            <a href="https://www.linkedin.com/in/rk2499/" class="btn" target="_blank"
+                               style="color: rgba(0,0,0,0)"><i class='fab fa-linkedin' style='font-size:44px;color:#0072b1'></i></a>
+                            &nbsp;&nbsp;&nbsp;
+                            <a href="https://github.com/rakesht2499" class="btn btn-success" target="_blank"
+                               style="color: black"><i class='fab fa-github' style='font-size:24px'></i></a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="https://auth.geeksforgeeks.org/user/rakeshkumar18/profile" class="btn" target="_blank"
+                               style="background-color: white"><i class='fas fa-code'
+                                                                  style='font-size:23px;color:green;'></i></i></a>
+                        </div>
+                    </div>
+                </center>
             </div>
-          </center>
+            <div class="col animated slideInRight">
+                <div class="w3-card-4" id="aboutme">
+                    <header class="w3-container" style="background-color: rgba(0,0,0,0.5);">
+                        <h1 style="font-family: 'Roboto Slab', serif;">Rakesh Kumar</h1>
+                    </header>
+                    <footer class="w3-container" style="background-color: rgba(0,0,0,0.3)">
+                        <h5>Software Engineer @ Freshworks</h5>
+                    </footer>
+                    <div class="w3-container" style="background-color: rgba(0,0,0,0);padding: 5%">
+                        <p>A software development engineer with over a year of experience in design, development, and
+                            maintenance of distributed software applications, bagging expertise in building REST API's, data
+                            modeling, DevOps and backend development.
+                            Also a young, dynamic, focused and technical prowess with a keen interest in learning and applying
+                            my knowledge in challenging situations
+                            <br>
+                            I've been the President of Transcode Forum, Dept. of Computer Science, D G Vaishnav College
+                            (2018-2019)</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col animated slideInRight">
-            <div class="w3-card-4" id="aboutme">
-              <header class="w3-container" style="background-color: rgba(0,0,0,0.5);">
-                <h1 style="font-family: 'Roboto Slab', serif;">Rakesh Kumar</h1>
-              </header>
-              <footer class="w3-container" style="background-color: rgba(0,0,0,0.3)">
-                <h5>Software Engineer @ Freshworks</h5>
-              </footer>
-              <div class="w3-container" style="background-color: rgba(0,0,0,0);padding: 5%">
-                <p>A software development engineer with over a year of experience in design, development, and maintenance of distributed software applications, bagging expertise in building REST API's, data modeling, DevOps and backend development.</p>
-              </div>
-              </div>
-      </div>
-    </div>
 
-    <!-- Experience -->
-    <div class="row fullView" id="experience">
-        <div class="col-lg-12" style="color:white">
-              <div class="w3-card-4" id="experienceContent">
-              <header class="w3-container" style="background-color: rgba(0,0,0,0.5);">
-                <h1 style="font-family: 'Roboto Slab', serif;"><center>Experience</center></h1>
-              </header>
-              <br><br>
-              <footer class="w3-container" style="background-color: rgba(0,0,0,0.3)">
-                <h5>Software Engineer, Freshworks</h5>
-                Full-time<br>
-                Jun 2019 – Present<br>
-                11 months
-              </footer>
-              <div class="w3-container" style="background-color: rgba(0,0,0,0);padding: 2%">
-                <p>A software development engineer with over a year of experience in design, development, and maintenance of distributed software applications, bagging expertise in building REST API's, data modeling, DevOps and backend development.</p>
-              </div>
-              <br>
-              <footer class="w3-container" style="background-color: rgba(0,0,0,0.3)">
-                <h5>Software Engineer Intern, Freshworks</h5>
-                Internship<br>
-                Jan 2019 – May 2019<br>
-                5 months
-              </footer>
-              <div class="w3-container" style="background-color: rgba(0,0,0,0);padding: 2%">
-                <p>A software development engineer with over a year of experience in design, development, and maintenance of distributed software applications, bagging expertise in building REST API's, data modeling, DevOps and backend development.</p>
-              </div>
-              </div>
+        <!-- Experience -->
+        <div class="row fullView" id="experience">
+            <div class="exp0 visib" style="width:100%;">
+                <h1 style="font-family: 'Roboto Slab', serif;background-color: rgba(0,0,0,0.5);color: rgba(255,255,255,0.7)">
+                    <center>Experience</center>
+                </h1>
+            </div>
+            <div class="row" style="color:white">
+                <div class="col" style="height:100%;">
+                    <div class="w3-card-4 exp1 visib">
+                        <footer class="w3-container" style="background-color: rgba(0,0,0,0.3)">
+                            <h5>Software Engineer, Freshworks</h5>
+                            Full-time<br>
+                            Jun 2019 – Present<br>
+                            11 months
+                        </footer>
+                        <div class="w3-container" style="background-color: rgba(0,0,0,0);padding: 2%">
+                            Experienced in working with Java Restful framework, gRPC protocol, Docker, Jenkins, Redis, Terraform
+                            & AWS. <br>
+                            <ul>
+                                <li> Versioning of REST API's
+                                    <ul>
+                                        <li> Design approach & implementation to perform the schema change in NoSQL DB with
+                                            backward compatibility along with python scripts to migrate the existing data
+                                        <li> Enabling the existing API’s to handle with both schema’s
+                                    </ul>
+                                <li> Automated Deployment
+                                    <ul>
+                                        <li> Design & implementation of scripts to automate the deployment process using boto3
+                                            to perform ECS based deployment using Opsworks stack.
+                                    </ul>
+                                <li> Metrics & Dashboard
+                                    <ul>
+                                        <li>Organising and sending various java application metrics by performing metric
+                                            conversion using dropwizard to enable dashboards in Grafana.
+                                    </ul>
+                                    <ul>Creating multiple dashboards for effective monitoring, Self-taught influx DB queries,
+                                        types of metrics in Prometheus & dropwizard.
+                                    </ul>
+                                <li> Distributed Load Testing
+                                    <ul>
+                                        <li> Design, Implementation & dockerization of a distributed load testing utility
+                                            scripted in python on top of Jmeter involving mounting volumes and security group
+                                            configurations to run in AWS.
+                                        <li> Writing pipeline scripts to create a pipelined build enabling configurable UI in
+                                            Jenkins.
+                                        <li> Implementation of a python script to identify the threshold of the application.
+                                    </ul>
+                                <li> Distributed Tracing
+                                    <ul>
+                                        <li> Proposal & implementation for performing distributed tracing of a request
+                                            throughout multiple modules & standardizing the configuration across multiple
+                                            products. Self Taught Envoy proxy, MDC, NLB.
+                                    </ul>
+                                <li> Integrating platform service
+                                    <ul>
+                                        <li> Closely working with an internal team to understand their stack and implement shell
+                                            scripts to introduce ratelimiting service.
+                                    </ul><br>
+                                    Responsible for development and performing 3 levels of testing - unit, integration & end to
+                                    end (in python).
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="col" style="width:100%">
+                    <div class="row">
+                        <div class="w3-card-4 exp2 visib">
+                            <footer class="w3-container" style="background-color: rgba(0,0,0,0.3)">
+                                <h5>Software Engineer Intern, Freshworks</h5>
+                                Internship<br>
+                                Jan 2019 – May 2019<br>
+                                5 months
+                            </footer>
+                            <div class="w3-container" style="background-color: rgba(0,0,0,0);padding: 2%">
+                                <ul>
+                                    <li>Effectively writing Object Oriented Code for the implementation different methods in
+                                    REST-API.
+                                    <li> Removing the redundancy of resources with backward compatibility.
+                                    <li> Fixing issues with end to end tests for automatically fetching the required hosts using
+                                    Python and shell scripts.
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="w3-card-4 exp3 visib">
+                            <footer class="w3-container" style="background-color: rgba(0,0,0,0.3)">
+                                <h5>Python Developer, Thomas Innovation</h5>
+                                Internship<br>
+                                Aug 2018 – Nov 2018<br>
+                                4 months
+                            </footer>
+                            <div class="w3-container" style="background-color: rgba(0,0,0,0);padding: 2%">
+                                <ul>
+                                    <li> Developing a color-based detection using OpenCV-Python and implementing a sub-module for
+                                    classifying the objects in a live video with & without pre-defined images
+                                    <li> Developing a labeling utility using PyQT
+                                    <li> Developing a website from Scratch for the same
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="w3-card-4 exp4 visib">
+                            <footer class="w3-container" style="background-color: rgba(0,0,0,0.3)">
+                                <h5>Full Stack Developer, Proelium Analytics</h5>
+                                Internship<br>
+                                Jul 2018 – Aug 2018<br>
+                                2 months
+                            </footer>
+                            <div class="w3-container" style="background-color: rgba(0,0,0,0);padding: 2%;">
+                                <ul>
+                                    <li> Implementing the authentication & authorization for the product.
+                                    <li> Designing the DB models and mobile-friendly UI for invoice maintenance.
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>

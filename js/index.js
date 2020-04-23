@@ -41,11 +41,21 @@ function isElementInViewport(elem) {
 
 function checkAnimation() {
   var $elem = $('#experience');
+  var $exp0 = $('.exp0');
+  var $exp1 = $('.exp1');
+  var $exp2 = $('.exp2');
+  var $exp3 = $('.exp3');
+  var $exp4 = $('.exp4');
 
   if (isElementInViewport($elem)) {
-      // Start the animation
-      $elem.addClass('animated fadeInRightBig');
-  } //else {
-    //  $elem.removeClass('animated slideInLeft');
- // }
+    $exp0.removeClass("visib");
+    $exp0.addClass('animated fadeIn');
+    $.each([ $exp1, $exp2, $exp3, $exp4 ], function( index, value ) {
+      setTimeout(function() {
+        console.log(index, value);
+        value.removeClass("visib");
+        value.addClass('animated fadeInRightBig');
+      }, 200*(index+1));
+    });
+  }
 }

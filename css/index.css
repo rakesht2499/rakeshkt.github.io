@@ -4,12 +4,20 @@ html {
 }
 
 body {
-    background-image: url("https://images.wallpaperscraft.com/image/cubes_grid_background_dark_texture_50364_1920x1180.jpg");
+    background-image: url("../images/background.jpg");
     background-attachment: fixed;
     background-size: cover;
     height: 100%;
     overflow: auto;
     font-family: 'Roboto Slab', serif;
+}
+
+.alertStyle {
+    top:2%;
+    right:2%;
+    position:fixed;
+    padding:1% 5% 1% 5%;
+    z-index:999;
 }
 
 h1,h2,h3,h4,h5 {
@@ -29,7 +37,6 @@ h1,h2,h3,h4,h5 {
 
 #aboutme {
   color: white;
-  /*background-color: rgba(0,0,0,0);*/
 }
 
 .verticalCenter {
@@ -39,4 +46,8 @@ h1,h2,h3,h4,h5 {
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+.visib {
+visibility: hidden;
 }
