@@ -2,75 +2,22 @@
   <head>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<!--      <link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-      <link rel="stylesheet" href="css/index.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
       <script src='https://kit.fontawesome.com/a076d05399.js'></script>
       <script src="https://www.w3schools.com/lib/w3.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script>
-          window.addEventListener('scroll', function(){ checkAnimation(); }, true)
-      </script>
-      <script>
-          window.onload = function() {
-          var h = window.innerHeight;
-          console.log(h);
-          console.log(h/4);
-          document.getElementById("mylogo").style.margin = h/6+" 0 "+h/6+" 5%";
-          document.getElementById("aboutme").style.margin = h/6+" 0 "+h/6+" 0";
-          document.getElementById("experience").style.height = h+"px";
-          }
-
-          function gotoExperience() {
-              document.querySelector('#experience').scrollIntoView({
-                  behavior: 'smooth'
-              });
-          }
-
-          function gotoMyIntro() {
-              document.querySelector('#FirstRowAboutMe').scrollIntoView({
-                  behavior: 'smooth'
-              });
-          }
-
-          function isElementInViewport(elem) {
-    var $elem = $(elem);
-
-    // Get the scroll position of the page.
-    var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
-    var viewportTop = $(scrollElem).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
-
-    // Get the position of the element on the page.
-    var elemTop = Math.round( $elem.offset().top );
-    var elemBottom = elemTop + $elem.height();
-
-    return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
-}
-
-// Check if it's time to start the animation.
-function checkAnimation() {
-    var $elem = $('#experience');
-
-    if (isElementInViewport($elem)) {
-        // Start the animation
-        $elem.addClass('animated slideInLeft');
-    } //else {
-      //  $elem.removeClass('animated slideInLeft');
-   // }
-}
-
-
-      </script>
+      <script type="text/javascript" src="js/index.js"></script>
+      <link rel="stylesheet" href="css/index.css">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 </head>
-<body onscroll="checkAnimation()">
-            <div class="alert alert-warning alert-dismissible">
-                <center><button type="button" class="close" data-dismiss="alert">&times;</button>
-                <strong>Sorry!</strong> Website Under Construction.</center>
-            </div>
+<body>
+    <div class="alert alert-warning alert-dismissible">
+        <center><button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Sorry!</strong> Website Under Construction.</center>
+    </div>
 
 <!-- Fixed Navbar -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -86,7 +33,7 @@ function checkAnimation() {
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Skills</a>
-            </li>
+            </li> 
             <li class="nav-item">
                 <a class="nav-link" href="#">Projects</a>
             </li>
@@ -94,9 +41,10 @@ function checkAnimation() {
     </nav>
 
 <!-- About Me -->
-    <div class="row" id="FirstRowAboutMe">
-        <div class="col animated slideInLeft" id="mylogo">
-            <div class="card">
+    <div class="row fullView" id="FirstRowAboutMe">
+        <div class="col-lg-5 animated slideInLeft" id="mylogo">
+          <center>
+            <div class="card verticalCenter cardCss">
               <img class="card-img-top" src="https://ca.slack-edge.com/T032648LE-UUKP9GQNS-43019cb9e648-512" alt="Card image">
               <div class="card-body">
                 <h4 class="card-title">Rakesh Kumar T</h4>
@@ -108,19 +56,51 @@ function checkAnimation() {
                   <a href="https://auth.geeksforgeeks.org/user/rakeshkumar18/profile" class="btn" target="_blank" style="background-color: white"><i class='fas fa-code' style='font-size:23px;color:green;'></i></i></a>
               </div>
             </div>
+          </center>
         </div>
-        <div class="col">
-            <div id="aboutme" style="background-color:rbga(0,255,0,0.5);color:white;">
-                <div class="animated slideInRight" style="padding:10%">
-                    About me is here
-                </div>
-            </div>
+        <div class="col animated slideInRight">
+            <div class="w3-card-4" id="aboutme">
+              <header class="w3-container" style="background-color: rgba(0,0,0,0.5);">
+                <h1 style="font-family: 'Roboto Slab', serif;">Rakesh Kumar</h1>
+              </header>
+              <footer class="w3-container" style="background-color: rgba(0,0,0,0.3)">
+                <h5>Software Engineer @ Freshworks</h5>
+              </footer>
+              <div class="w3-container" style="background-color: rgba(0,0,0,0);padding: 5%">
+                <p>A software development engineer with over a year of experience in design, development, and maintenance of distributed software applications, bagging expertise in building REST API's, data modeling, DevOps and backend development.</p>
+              </div>
+              </div>
       </div>
     </div>
-    <br>
-    <div class="row" id="experience">
+
+    <!-- Experience -->
+    <div class="row fullView" id="experience">
         <div class="col-lg-12" style="color:white">
-            Working on this man
+              <div class="w3-card-4" id="experienceContent">
+              <header class="w3-container" style="background-color: rgba(0,0,0,0.5);">
+                <h1 style="font-family: 'Roboto Slab', serif;"><center>Experience</center></h1>
+              </header>
+              <br><br>
+              <footer class="w3-container" style="background-color: rgba(0,0,0,0.3)">
+                <h5>Software Engineer, Freshworks</h5>
+                Full-time<br>
+                Jun 2019 – Present<br>
+                11 months
+              </footer>
+              <div class="w3-container" style="background-color: rgba(0,0,0,0);padding: 2%">
+                <p>A software development engineer with over a year of experience in design, development, and maintenance of distributed software applications, bagging expertise in building REST API's, data modeling, DevOps and backend development.</p>
+              </div>
+              <br>
+              <footer class="w3-container" style="background-color: rgba(0,0,0,0.3)">
+                <h5>Software Engineer Intern, Freshworks</h5>
+                Internship<br>
+                Jan 2019 – May 2019<br>
+                5 months
+              </footer>
+              <div class="w3-container" style="background-color: rgba(0,0,0,0);padding: 2%">
+                <p>A software development engineer with over a year of experience in design, development, and maintenance of distributed software applications, bagging expertise in building REST API's, data modeling, DevOps and backend development.</p>
+              </div>
+              </div>
         </div>
     </div>
 </body>
