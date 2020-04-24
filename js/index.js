@@ -1,10 +1,11 @@
-window.addEventListener('scroll', function(){ checkAnimation(); }, true);
-  var i = 0;
-  var txt = 'rem ipsum dummy text blabla.';
-  var speed = 0.5;
+window.addEventListener('scroll', function(){
+    checkSkillAnimation();
+    checkAnimation();
+}, true);
 
 window.onload = function() {
     typeWriter();
+   checkSkillAnimation();
    checkAnimation();
 }
 
@@ -64,13 +65,37 @@ function checkAnimation() {
   var $exp4 = $('.exp4');
 
   if (isElementInViewport($elem)) {
+  console.log("Inside Experiment");
     $exp0.removeClass("visib");
     $exp0.addClass('animated fadeIn');
     $.each([ $exp1, $exp2, $exp3, $exp4 ], function( index, value ) {
       setTimeout(function() {
-        console.log(index, value);
+//        console.log("From Exp",index, value);
         value.removeClass("visib");
         value.addClass('animated fadeInRightBig');
+      }, 200*(index+1));
+    });
+  }
+}
+
+function checkSkillAnimation() {
+  var $elementSkill = $('.skill1');
+  var $skill0 = $('.skill0');
+  var $skill1 = $('.skill1');
+  var $skill2 = $('.skill2');
+  var $skill3 = $('.skill3');
+  var $skill4 = $('.skill4');
+  var $skill5 = $('.skill5');
+
+  if (isElementInViewport($elementSkill)) {
+  console.log("Inside Skill");
+    $skill0.removeClass("visib");
+    $skill0.addClass('animated fadeIn');
+    $.each([ $skill1, $skill2, $skill3, $skill4, $skill5 ], function( index, value ) {
+      setTimeout(function() {
+//        console.log("From Skills",index, value);
+        value.removeClass("visib");
+        value.addClass('animated fadeInLeftBig');
       }, 200*(index+1));
     });
   }
