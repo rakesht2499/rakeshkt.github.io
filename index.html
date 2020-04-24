@@ -38,10 +38,10 @@
                     <a class="nav-link" onclick="gotoExperience()">Experience</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Skills</a>
+                    <a class="nav-link" onclick="gotoSkills()">Skills</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Projects</a>
+                    <a class="nav-link" onclick="gotoProjects()">Projects</a>
                 </li>
             </ul>
         </nav>
@@ -60,6 +60,23 @@
             <script>
                 $(function(){
                     $("#experience").load("sections/experience.html");
+                });
+            </script>
+        </div>
+
+        <!-- Skills -->
+        <div class="row fullView" id="skills">
+            <script>
+                $(function(){
+                    $("#skills").load("sections/skills.html");
+                });
+            </script>
+        </div>
+        <!-- Skills -->
+        <div class="row fullView" id="projects">
+            <script>
+                $(function(){
+                    $("#projects").load("sections/projects.html");
                 });
             </script>
         </div>

@@ -1,15 +1,25 @@
 window.addEventListener('scroll', function(){ checkAnimation(); }, true);
+  var i = 0;
+  var txt = 'rem ipsum dummy text blabla.';
+  var speed = 0.5;
 
 window.onload = function() {
-  checkAnimation();
+    typeWriter();
+   checkAnimation();
+}
 
-  // For setting positions of Logo, and other stuffs
-  var h = window.innerHeight;
-  console.log(h);
-  console.log(h/4);
-  // document.getElementById("mylogo").style.margin = h/6+" 0 "+h/6+" 5%";
-  document.getElementById("aboutme").style.margin = h/3+" 0 "+h/4+" 0";
-  // document.getElementById("experience").style.height = h+"px";
+function typeWriter() {
+    if (i < txt.length) {
+      document.getElementById("demo").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, 20);
+    }
+  }
+
+function gotoMyIntro() {
+  document.querySelector('#aboutmeRow').scrollIntoView({
+      behavior: 'smooth'
+  });
 }
 
 function gotoExperience() {
@@ -18,8 +28,14 @@ function gotoExperience() {
   });
 }
 
-function gotoMyIntro() {
-  document.querySelector('#FirstRowAboutMe').scrollIntoView({
+function gotoSkills() {
+  document.querySelector('#skills').scrollIntoView({
+      behavior: 'smooth'
+  });
+}
+
+function gotoProjects() {
+  document.querySelector('#projects').scrollIntoView({
       behavior: 'smooth'
   });
 }
@@ -59,3 +75,60 @@ function checkAnimation() {
     });
   }
 }
+
+var TxtType = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 500;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+    var that = this;
+    var delta = 200 - Math.random() * 100;
+
+    if (this.isDeleting) { delta /= 2; }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+    }
+
+    setTimeout(function() {
+    that.tick();
+    }, delta);
+};
+
+window.onload = function() {
+    var elements = document.getElementsByClassName('typewrite');
+    for (var i=0; i<elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-type');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+          new TxtType(elements[i], JSON.parse(toRotate), period);
+        }
+    }
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+    document.body.appendChild(css);
+};

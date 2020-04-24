@@ -24,6 +24,22 @@ h1,h2,h3,h4,h5 {
   font-family: 'Roboto Slab', serif;
 }
 
+.orangeTitle {
+    color:#FF6A00;
+}
+
+.redTitle {
+    color: #E80046;
+}
+
+.greySubTitle {
+    color: rgba(255,255,255,0.5);
+}
+
+.greyExperience {
+    color: rgba(255,255,255,0.8);
+}
+
 .card {
     width:400px;
     background-color:rgba(0,0,0,0.2);
@@ -37,15 +53,15 @@ h1,h2,h3,h4,h5 {
 
 #aboutme {
   color: white;
+  margin: 15% 15% 0 0;
 }
 
+#aboutme2 {
+  color: white;
+  margin: 0 15% 0 0;
+}
 .verticalCenter {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    margin-top: 20%;
 }
 
 .visib {
