@@ -23,6 +23,8 @@ window.onload = function() {
        document.body.appendChild(css);
 }
 
+
+
 function typeWriter() {
     if (i < txt.length) {
       document.getElementById("demo").innerHTML += txt.charAt(i);
