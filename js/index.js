@@ -7,6 +7,20 @@ window.onload = function() {
     typeWriter();
    checkSkillAnimation();
    checkAnimation();
+
+   // For Type-Write
+   var elements = document.getElementsByClassName('typewrite');
+       for (var i=0; i<elements.length; i++) {
+           var toRotate = elements[i].getAttribute('data-type');
+           var period = elements[i].getAttribute('data-period');
+           if (toRotate) {
+             new TxtType(elements[i], JSON.parse(toRotate), period);
+           }
+       }
+       var css = document.createElement("style");
+       css.type = "text/css";
+       css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+       document.body.appendChild(css);
 }
 
 function typeWriter() {
@@ -70,7 +84,6 @@ function checkAnimation() {
     $exp0.addClass('animated fadeIn');
     $.each([ $exp1, $exp2, $exp3, $exp4 ], function( index, value ) {
       setTimeout(function() {
-//        console.log("From Exp",index, value);
         value.removeClass("visib");
         value.addClass('animated fadeInRightBig');
       }, 200*(index+1));
@@ -79,7 +92,7 @@ function checkAnimation() {
 }
 
 function checkSkillAnimation() {
-  var $elementSkill = $('.skill1');
+  var $elementSkill = $('#skills');
   var $skill0 = $('.skill0');
   var $skill1 = $('.skill1');
   var $skill2 = $('.skill2');
@@ -93,7 +106,6 @@ function checkSkillAnimation() {
     $skill0.addClass('animated fadeIn');
     $.each([ $skill1, $skill2, $skill3, $skill4, $skill5 ], function( index, value ) {
       setTimeout(function() {
-//        console.log("From Skills",index, value);
         value.removeClass("visib");
         value.addClass('animated fadeInLeftBig');
       }, 200*(index+1));
@@ -140,20 +152,4 @@ TxtType.prototype.tick = function() {
     setTimeout(function() {
     that.tick();
     }, delta);
-};
-
-window.onload = function() {
-    var elements = document.getElementsByClassName('typewrite');
-    for (var i=0; i<elements.length; i++) {
-        var toRotate = elements[i].getAttribute('data-type');
-        var period = elements[i].getAttribute('data-period');
-        if (toRotate) {
-          new TxtType(elements[i], JSON.parse(toRotate), period);
-        }
-    }
-    // INJECT CSS
-    var css = document.createElement("style");
-    css.type = "text/css";
-    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-    document.body.appendChild(css);
 };
