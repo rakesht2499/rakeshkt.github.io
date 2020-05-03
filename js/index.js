@@ -1,6 +1,7 @@
 window.addEventListener('scroll', function(){
     checkSkillAnimation();
     checkAnimation();
+    checkprojectsAnimation();
 }, true);
 
 window.onload = function() {
@@ -57,6 +58,12 @@ function gotoProjects() {
   });
 }
 
+function gotoHobbies() {
+  document.querySelector('#hobbies').scrollIntoView({
+      behavior: 'smooth'
+  });
+}
+
 function isElementInViewport(elem) {
   var $elem = $(elem);
 
@@ -103,10 +110,33 @@ function checkSkillAnimation() {
   var $skill5 = $('.skill5');
 
   if (isElementInViewport($elementSkill)) {
-  console.log("Inside Skill");
     $skill0.removeClass("visib");
     $skill0.addClass('animated fadeIn');
     $.each([ $skill1, $skill2, $skill3, $skill4, $skill5 ], function( index, value ) {
+      setTimeout(function() {
+        value.removeClass("visib");
+        value.addClass('animated fadeInLeftBig');
+      }, 200*(index+1));
+    });
+  }
+}
+
+function checkprojectsAnimation() {
+  var $elementSkilll = $('#projects');
+  var $proj0 = $('.proj0');
+  var $proj1 = $('.proj1');
+  var $proj2 = $('.proj2');
+  var $proj3 = $('.proj3');
+  var $proj4 = $('.proj4');
+  var $proj5 = $('.proj5');
+  var $proj6 = $('.proj6');
+  var $proj7 = $('.proj7');
+
+  if (isElementInViewport($elementSkilll)) {
+  console.log("Inside Skill");
+    $proj0.removeClass("visib");
+    $proj0.addClass('animated fadeIn');
+    $.each([ $proj1, $proj2, $proj3, $proj4, $proj5, $proj6, $proj7], function( index, value ) {
       setTimeout(function() {
         value.removeClass("visib");
         value.addClass('animated fadeInLeftBig');
