@@ -1,5 +1,5 @@
-# rakeshkt.github.io
-PersonalWebsite
+# PersonalWebsite
+rakeshkt.github.io
 
 # Copyrights
 ```shell
