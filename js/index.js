@@ -185,3 +185,6 @@ TxtType.prototype.tick = function() {
     that.tick();
     }, delta);
 };
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
