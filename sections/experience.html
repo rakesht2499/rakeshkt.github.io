@@ -1,126 +1,294 @@
-<div class="exp0 visib" style="width:100%;">
-    <h1 style="font-family: 'Roboto Slab', serif;background-color: rgba(0,0,0,0.5);color: rgba(255,255,255,0.7)">
-        <center>Experience</center>
-    </h1>
+<div class="exp0 visib" style="width: 100%">
+  <h1
+    style="
+      font-family: 'Roboto Slab', serif;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: rgba(255, 255, 255, 0.7);
+    "
+  >
+    <center>Experience</center>
+  </h1>
 </div>
-<div class="row" style="color:white">
-    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-        <div class="w3-card-4 exp1 visib" style="padding: 5%;">
-            <footer class="w3-container greySubTitle" style="background-color: rgba(0,0,0,0.3)">
-                <h5 class="redTitle">Software Engineer, Freshworks</h5>
-                Full-time<br>
-                Jun 2019 – Present<br>
-                1 year
-            </footer>
-            <div class="w3-container greyExperience" style="background-color: rgba(0,0,0,0);padding: 2%">
-                Experienced in working with Java Restful framework, gRPC protocol, Docker, Jenkins, Redis, Terraform
-                & AWS. <br>
-                <ul>
-                    <li> Versioning of REST API's
-                        <ul>
-                            <li> Enabling the preceeding versions of API’s to handle all versions.
-                        </ul>
-                    <li> Schema Change
-                        <ul>
-                            <li> Design approach & implementation to perform the schema change in NoSQL DB with
-                                backward compatibility along with python scripts to migrate the existing data
-                            <li> Enabling the existing API’s to handle with both schema’s
-                        </ul>
-                    <li> Automated Deployment
-                        <ul>
-                            <li> Design & implementation of scripts to automate the deployment process using boto3
-                                to perform ECS based deployment using Opsworks stack.
-                        </ul>
-                    <li> Metrics & Dashboard
-                        <ul>
-                            <li>Organising and sending various java application metrics by performing metric
-                                conversion using dropwizard to enable dashboards in Grafana.
-                        </ul>
-                        <ul>Creating multiple dashboards for effective monitoring, Self-taught influx DB queries,
-                            types of metrics in Prometheus & dropwizard.
-                        </ul>
-                    <li> Distributed Load Testing
-                        <ul>
-                            <li> Design, Implementation & dockerization of a distributed load testing utility
-                                scripted in python on top of Jmeter involving mounting volumes and security group
-                                configurations to run in AWS.
-                            <li> Writing pipeline scripts to create a pipelined build enabling configurable UI in
-                                Jenkins.
-                            <li> Implementation of a python script to identify the threshold of the application.
-                        </ul>
-                    <li> Distributed Tracing
-                        <ul>
-                            <li> Proposal & implementation for performing distributed tracing of a request
-                                throughout multiple modules & standardizing the configuration across multiple
-                                products. Self Taught Envoy proxy, MDC, NLB.
-                        </ul>
-                    <li> Integrating platform service
-                        <ul>
-                            <li> Closely working with an internal team to understand their stack and implement shell
-                                scripts to introduce ratelimiting service.
-                        </ul><br>
-                        Responsible for development and performing 3 levels of testing - unit, integration & end to
-                        end (in python).
-                </ul>
-            </div>
-        </div>
+<div class="row" style="color: white">
+  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+    <div class="w3-card-4 exp1 visib" style="padding: 5%">
+      <footer
+        class="w3-container greySubTitle"
+        style="background-color: rgba(0, 0, 0, 0.3)"
+      >
+        <h5 class="redTitle">Sr. Software Engineer, Bewakoof.com</h5>
+        Full-time<br />
+        Dec 2020 – Present<br />
+        10 months
+      </footer>
+      <div
+        class="w3-container greyExperience"
+        style="background-color: rgba(0, 0, 0, 0); padding: 2%"
+      >
+        Working on marketplace&logistics team
+        <br />
+        <ul>
+          <li>
+            Marketplace Service (External SellerOnboarding)
+            <br /><br />
+            Completely owned the end-to-end development for marketplace service
+            including high & low-level design, which helped onboard external
+            sellers to our platform resulting in an increase in revenue.
+            <br /><br />
+            Tech used: nodejs using SequelizeORM for controlling migrations, and
+            bull queue to communicate with Bewakoof service by exposing
+            endpoints with Authenticating as superuser.
+            <br /><br />
+            Developed API's for order management(using pagination) with blocking
+            inventory, generation of invoice labels (using
+            puppeteer&handlebars),& communicating the order status between
+            seller & customer in near to real-time. Integrating with 3PPcourier
+            partner for manifestations & tracking updates
+          </li>
+          <br />
+          <li>
+            Chatbot API's
+            <br /><br />
+            Exposing orders API to fetch details ofthe most recent orders &
+            details of individual orders Authenticating 3PP with JWT token with
+            expiration set for the same Allowing the user to login via OTP &
+            cancel the orders from the chatbot
+          </li>
+          <br />
+          <li>
+            Courier Service
+            <br /><br />
+            Giving logistics team the flexibility to select different courier
+            partners for every seller Integrating this servicewith the
+            marketplace service to use the dynamicity ofthe courier partnerfor
+            every seller & maintaining the internal & 3PP courier partner
+            mapping in redis
+          </li>
+          <br />
+          <li>
+            Responsible for guiding & ramping up an SDE-1 under my guidance
+          </li>
+          <br />
+          <br />
+          Responsible for building & maintaining the above mentioned services &
+          actively providing resolutions for all on call queries.
+        </ul>
+      </div>
     </div>
-    <br>
-    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="width:100%;padding: 5%;">
-        <div class="row">
-            <div class="w3-card-4 exp2 visib" style="width:100%;">
-                <footer class="w3-container greySubTitle" style="background-color: rgba(0,0,0,0.3)">
-                    <h5 class="redTitle">Software Engineer Intern, Freshworks</h5>
-                    Internship<br>
-                    Jan 2019 – May 2019<br>
-                    5 months
-                </footer>
-                <div class="w3-container greyExperience" style="background-color: rgba(0,0,0,0);padding: 2%">
-                    <ul>
-                        <li>Effectively writing Object Oriented Code for the implementation different methods in
-                            REST-API.
-                        <li> Removing the redundancy of resources with backward compatibility.
-                        <li> Fixing issues with end to end tests for automatically fetching the required hosts using
-                            Python and shell scripts.
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="w3-card-4 exp3 visib" style="width:100%;">
-                <footer class="w3-container greySubTitle" style="background-color: rgba(0,0,0,0.3)">
-                    <h5 class="redTitle">Python Developer, Thomas Innovation</h5>
-                    Internship<br>
-                    Aug 2018 – Nov 2018<br>
-                    4 months
-                </footer>
-                <div class="w3-container greyExperience" style="background-color: rgba(0,0,0,0);padding: 2%">
-                    <ul>
-                        <li> Developing a color-based detection using OpenCV-Python and implementing a sub-module for
-                            classifying the objects in a live video with & without pre-defined images
-                        <li> Developing a labeling utility using PyQT
-                        <li> Developing a website from Scratch for the same
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="w3-card-4 exp4 visib" style="width:100%;">
-                <footer class="w3-container greySubTitle" style="background-color: rgba(0,0,0,0.3);">
-                    <h5 class="redTitle">Full Stack Developer, Proelium Analytics</h5>
-                    Internship<br>
-                    Jul 2018 – Aug 2018<br>
-                    2 months
-                </footer>
-                <div class="w3-container greyExperience" style="background-color: rgba(0,0,0,0);padding: 2%;">
-                    <ul>
-                        <li> Implementing the authentication & authorization for the product.
-                        <li> Designing the DB models and mobile-friendly UI for invoice maintenance.
-                    </ul>
-                </div>
-            </div>
-        </div>
+  </div>
+  <br />
+  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+    <div class="w3-card-4 exp1 visib" style="padding: 5%">
+      <footer
+        class="w3-container greySubTitle"
+        style="background-color: rgba(0, 0, 0, 0.3)"
+      >
+        <h5 class="redTitle">Software Engineer, Freshworks</h5>
+        Full-time<br />
+        Jun 2019 – Dec 2020<br />
+        1 year 7 months
+      </footer>
+      <div
+        class="w3-container greyExperience"
+        style="background-color: rgba(0, 0, 0, 0); padding: 2%"
+      >
+        Experienced in working with Java Restful framework, gRPC protocol,
+        Docker, Jenkins, Redis, Terraform & AWS. <br />
+        <ul>
+          <li>
+            Versioning of REST API's
+            <ul>
+              <li>
+                Enabling the preceeding versions of API’s to handle all
+                versions.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            Schema Change
+            <ul>
+              <li>
+                Design approach & implementation to perform the schema change in
+                NoSQL DB with backward compatibility along with python scripts
+                to migrate the existing data
+              </li>
+
+              <li>Enabling the existing API’s to handle with both schema’s</li>
+            </ul>
+          </li>
+
+          <li>
+            Automated Deployment
+            <ul>
+              <li>
+                Design & implementation of scripts to automate the deployment
+                process using boto3 to perform ECS based deployment using
+                Opsworks stack.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            Metrics & Dashboard
+            <ul>
+              <li>
+                Organising and sending various java application metrics by
+                performing metric conversion using dropwizard to enable
+                dashboards in Grafana.
+              </li>
+            </ul>
+
+            <ul>
+              Creating multiple dashboards for effective monitoring, Self-taught
+              influx DB queries, types of metrics in Prometheus & dropwizard.
+            </ul>
+          </li>
+
+          <li>
+            Distributed Load Testing
+            <ul>
+              <li>
+                Design, Implementation & dockerization of a distributed load
+                testing utility scripted in python on top of Jmeter involving
+                mounting volumes and security group configurations to run in
+                AWS.
+              </li>
+
+              <li>
+                Writing pipeline scripts to create a pipelined build enabling
+                configurable UI in Jenkins.
+              </li>
+
+              <li>
+                Implementation of a python script to identify the threshold of
+                the application.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            Distributed Tracing
+            <ul>
+              <li>
+                Proposal & implementation for performing distributed tracing of
+                a request throughout multiple modules & standardizing the
+                configuration across multiple products. Self Taught Envoy proxy,
+                MDC, NLB.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            Integrating platform service
+            <ul>
+              <li>
+                Closely working with an internal team to understand their stack
+                and implement shell scripts to introduce ratelimiting service.
+              </li>
+            </ul>
+
+            <br />
+            Responsible for development and performing 3 levels of testing -
+            unit, integration & end to end (in python).
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
+  <br />
+  <div
+    class="col-lg-6 col-md-12 col-sm-12 col-xs-12"
+    style="width: 100%; padding: 5%"
+  >
+    <div class="row">
+      <div class="w3-card-4 exp2 visib" style="width: 100%">
+        <footer
+          class="w3-container greySubTitle"
+          style="background-color: rgba(0, 0, 0, 0.3)"
+        >
+          <h5 class="redTitle">Software Engineer Intern, Freshworks</h5>
+          Internship<br />
+          Jan 2019 – May 2019<br />
+          5 months
+        </footer>
+        <div
+          class="w3-container greyExperience"
+          style="background-color: rgba(0, 0, 0, 0); padding: 2%"
+        >
+          <ul>
+            <li>
+              Effectively writing Object Oriented Code for the implementation
+              different methods in REST-API.
+            </li>
+
+            <li>
+              Removing the redundancy of resources with backward compatibility.
+            </li>
+            <li>
+              Fixing issues with end to end tests for automatically fetching the
+              required hosts using Python and shell scripts.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="w3-card-4 exp3 visib" style="width: 100%">
+        <footer
+          class="w3-container greySubTitle"
+          style="background-color: rgba(0, 0, 0, 0.3)"
+        >
+          <h5 class="redTitle">Python Developer, Thomas Innovation</h5>
+          Internship<br />
+          Aug 2018 – Nov 2018<br />
+          4 months
+        </footer>
+        <div
+          class="w3-container greyExperience"
+          style="background-color: rgba(0, 0, 0, 0); padding: 2%"
+        >
+          <ul>
+            <li>
+              Developing a color-based detection using OpenCV-Python and
+              implementing a sub-module for classifying the objects in a live
+              video with & without pre-defined images
+            </li>
+
+            <li>Developing a labeling utility using PyQT</li>
+            <li>Developing a website from Scratch for the same</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="w3-card-4 exp4 visib" style="width: 100%">
+        <footer
+          class="w3-container greySubTitle"
+          style="background-color: rgba(0, 0, 0, 0.3)"
+        >
+          <h5 class="redTitle">Full Stack Developer, Proelium Analytics</h5>
+          Internship<br />
+          Jul 2018 – Aug 2018<br />
+          2 months
+        </footer>
+        <div
+          class="w3-container greyExperience"
+          style="background-color: rgba(0, 0, 0, 0); padding: 2%"
+        >
+          <ul>
+            <li>
+              Implementing the authentication & authorization for the product.
+            </li>
+            <li>
+              Designing the DB models and mobile-friendly UI for invoice
+              maintenance.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
